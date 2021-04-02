@@ -9,7 +9,7 @@ import Header from '../components/Navbar';
 function MyApp({ Component, pageProps }) {
     // check localstorage and see if we store dark/light
     const themeFlag = () => {
-        if (localStorage.mode) {
+        if (typeof window !== 'undefined' && localStorage.mode) {
             return localStorage.mode === 'true';
         }
         return true;
