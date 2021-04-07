@@ -12,6 +12,9 @@ export const lightTheme = {
     subText: 'hsl(231, 37%, 63%)',
     bgColor: 'hsl(240, 27%, 98%)',
     header: 'rgb(55, 59, 83)',
+    homeSubText: 'hsl(231, 20%, 61%)',
+    filterOptionsBg: '#ffffff',
+    filterCheckBox: 'hsl(231, 73%, 93%)',
 };
 
 export const darkTheme = {
@@ -26,6 +29,9 @@ export const darkTheme = {
     subText: 'hsl(231, 73%, 93%)',
     bgColor: 'hsl(233, 30%, 11%)',
     header: 'hsl(233, 31%, 17%)',
+    homeSubText: '#ffffff',
+    filterOptionsBg: 'hsl(233, 30%, 21%)',
+    filterCheckBox: 'hsl(233, 31%, 17%)',
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -53,12 +59,21 @@ export const GlobalStyle = createGlobalStyle`
         width:100%;
         min-width: 28rem;
         background-color: ${(props) => props.theme.bgColor};
-        font-family: 'Kumbh Sans', sans-serif;
+        font-family: 'Spartan', sans-serif;
         overflow-x: hidden;
         transition: background-color ease-in-out 0.3s;
                                     
     }
     a {
         text-decoration: none;
+    }
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 `;
